@@ -21,6 +21,14 @@ function Todo(){
             setText("");
         }
 
+        /*
+            Um modo de printar um array dos itens ou conseguir manusear, sem o [] printa apenas um.
+
+            [items].forEach(element => {
+                console.log(element)
+            });
+        */
+    
     }
 
     return (
