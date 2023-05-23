@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './Todo.css'
 
 function Todo(){
 
+    const [text, setText] = useState("")
+
     function handleChange(event){
-        let text = event.target.value;
-        console.log(text)
+        let t = event.target.value;
+        setText(t)
     }
 
     return (
@@ -16,7 +18,7 @@ function Todo(){
                 <button>Add</button>
             </form>
             <ul>
-                <li>Item 1</li>
+                <li>{text}</li>
             </ul>
         </div>
     )
