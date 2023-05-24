@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Todo.css'
+import List from './List'
 
 function Todo(){
 
@@ -40,11 +41,10 @@ function Todo(){
                 {/* Este onClick no form tenta enviar o form/action.
                 Vamos evitar esse comportamento com preventDefault() dentro da função addItem */}
             </form> 
-            <ul>
-                 {items.map((item, index) =><li key={index}>{item}</li>)} {/*Cada item retorna uma linha */}
-            </ul>
+            <List items={items}></List>
         </div>
     )
 }
+
 
 export default Todo;
