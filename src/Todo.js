@@ -4,8 +4,23 @@ import List from './List'
 
 function Todo(){
 
-    const [text, setText] = useState("");
     const [items, setItems] = useState([]);
+
+    function onAddItem(item){
+        setItems([...items, item])
+    }
+
+    return (
+        <div className="container">
+            <h1>Todo</h1>
+            <TodoForm onAddItem={onAddItem}></TodoForm>
+            <List items={items}></List>
+        </div>
+    )
+}
+
+function TodoForm(props){
+    const [text, setText] = useState("");
 
     function handleChange(event){
         let t = event.target.value;
@@ -18,7 +33,8 @@ function Todo(){
         if(!text){
             window.alert("Type something to add on the list.")
         } else {
-            setItems([...items, text]);
+            // setItems([...items, text]);
+            props.onAddItem(text);
             setText("");
         }
 
@@ -32,17 +48,13 @@ function Todo(){
     
     }
 
-    return (
-        <div className="container">
-            <h1>Todo</h1>
-            <form>
-                <input onChange={handleChange} type="text" value={text}></input>
-                { <button onClick={addItem}>Add</button>}
-                {/* Este onClick no form tenta enviar o form/action.
-                Vamos evitar esse comportamento com preventDefault() dentro da função addItem */}
-            </form> 
-            <List items={items}></List>
-        </div>
+    return(
+        <form>
+            <input onChange={handleChange} type="text" value={text}></input>
+            { <button onClick={addItem}>Add</button>}
+            {/* Este onClick no form tenta enviar o form/action.
+            Vamos evitar esse comportamento com preventDefault() dentro da função addItem */}
+        </form> 
     )
 }
 
