@@ -1,4 +1,5 @@
 import React from "react"
+import Card from "./Card"
 
 function List(props){
 
@@ -15,10 +16,14 @@ function List(props){
     return(
         <ul>
             {props.items.map((item, index) =>
-            <li key={item.id} className={item.done? "done" : ""}>
-                {item.text}
+            <li key={item.id} >
+                <Card>
+                <p className={item.done? "done item" : "item"}>{item.text}</p>
+                <div className="ul-btn">
                 <button onClick={()=>{props.onDone(item)}}><DoneIcon done={item.done}></DoneIcon></button>
-                <button onClick={()=>{props.onItemDeleted(item)}}>X</button>
+                <button onClick={()=>{props.onItemDeleted(item)}}><img alt="bin" src="./assets/bin.png"></img></button>
+                </div>
+                </Card>
             </li>)} {/*Cada item retorna uma linha */}
 
         </ul>

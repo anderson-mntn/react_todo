@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './Todo.css'
-import List from './List'
-import TodoForm from "./TodoForm";
-import Item from "./Item";
+import List from './components/List'
+import TodoForm from "./components/TodoForm";
+import Item from "./components/Item";
 
 function Todo(){
 
