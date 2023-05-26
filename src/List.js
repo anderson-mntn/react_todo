@@ -15,7 +15,7 @@ function List(props){
     return(
         <ul>
             {props.items.map((item, index) =>
-            <li key={item.id}>
+            <li key={item.id} className={item.done? "done" : ""}>
                 {item.text}
                 <button onClick={()=>{props.onDone(item)}}><DoneIcon done={item.done}></DoneIcon></button>
                 <button onClick={()=>{props.onItemDeleted(item)}}>X</button>
