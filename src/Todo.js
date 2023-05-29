@@ -9,10 +9,6 @@ const SAVED_ITEMS = "savedItems"
 
 function Todo(){
 
-    // const ITEM_LS = JSON.parse(localStorage.getItem(SAVED_ITEMS))
-
-    // const [items, setItems] = useState([], [ITEM_LS]);
-
     const [items, setItems] = useState([]);
 
     // Pegando itens salvos no LS (se existir) e monta a lista
@@ -32,7 +28,6 @@ function Todo(){
     }, [items]);
 
 
-    
     function onAddItem(text){
         let listItem = new Item(text)
         
