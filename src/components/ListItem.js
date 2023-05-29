@@ -1,6 +1,5 @@
 import React from "react"
 import Card from "./Card"
-import List from "./List"
 
 function DoneIcon(props){
     if(props.done){
@@ -11,7 +10,6 @@ function DoneIcon(props){
         return (<img alt="undone" src="./assets/undone2.png"></img>)
     }
 }
-
 
 function ListItem(props){
     return(
