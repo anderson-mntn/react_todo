@@ -107,3 +107,7 @@ ul{
     background-color: #fff;
     border-radius: .3rem;
 }
+
+.hide{
+    display: none;
+}
