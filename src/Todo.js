@@ -16,11 +16,13 @@ function Todo(){
     // Pegando itens salvos no LS (se existir) e monta a lista
     useEffect(()=>{
         let savedItems = JSON.parse(localStorage.getItem(SAVED_ITEMS));
-        if(savedItems.length <= 0){
-            console.log("empty list")
-        } else {
-            console.log("s", savedItems)
-            setItems(savedItems)
+        if(savedItems){
+            if(savedItems.length <= 0){
+                console.log("empty list")
+            } else {
+                console.log("s", savedItems)
+                setItems(savedItems)
+            }
         }
     }, []);
     
