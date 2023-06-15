@@ -30,9 +30,10 @@ function TodoForm(props){
     }
 
     return(
-        <form>
+        <form className="modalForm">
+            <p>Add a new task or item</p>
             <input onChange={handleChange} type="text" value={text}></input>
-            { <button onClick={addItem}>Add</button>}
+            { <button onClick={addItem} className="BtnAddForm">Add</button>}
             {/* Este onClick no form tenta enviar o form/action.
             Vamos evitar esse comportamento com preventDefault() dentro da função addItem */}
         </form> 

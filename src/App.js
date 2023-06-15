@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Todo.css'
+import './App.css'
 import List from './components/List'
 import TodoForm from "./components/TodoForm";
 import Item from "./components/Item";

@@ -27,6 +27,10 @@ ul{
     list-style: none;
 }
 
+.listUl .card{
+    margin-top: .5rem ;
+}
+
 .item{
     width: 100%;
     padding: .25rem;
@@ -34,7 +38,6 @@ ul{
 }
 
 .card{
-    box-shadow: 0 2px 7px 1px black;
     background-color: lightblue;
     display: flex;
     flex-direction: row;
@@ -42,6 +45,7 @@ ul{
     align-items: center;
     height: 2.5rem;
     padding: .25rem .5rem;
+    border-radius: .25rem;
 }
 
 .ul-btn{
@@ -72,12 +76,12 @@ ul{
     border: 1rem;
     color: #fff;
     font-size: 1rem;  
-    background-color: rgb(160, 160, 211);
+    background-color: rgb(101, 161, 52);
     flex-direction: column;
 }
 
 .ul-btn button:nth-child(2):hover::before{
-    background-color: rgb(172, 80, 84);
+    background: rgb(190, 80, 80);
     content: "delete item";
     color: #fff;
    
@@ -85,7 +89,7 @@ ul{
 
 .ul-btn button:nth-child(2):hover::before, .ul-btn button:hover::before {
     border-radius: 1rem;
-    padding: .25rem .5rem;
+    padding: .25rem .7rem;
     position: absolute;
     margin: -43% -50%;
 }
@@ -102,12 +106,25 @@ ul{
     align-items: center;
 }
 
-.cardModal{
-    padding: 1rem;
+.cardModal {
     background-color: #fff;
     border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    padding: 1rem;
 }
 
 .hide{
     display: none;
 }
+.BtnAddForm{
+    margin-left: .25rem;
+}
+.modalForm p{
+    text-align: center;
+    margin-top: 0;
+}
+

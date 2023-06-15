@@ -14,10 +14,7 @@ function Modal(props){
     }
 
     return(
-        <div id="modal" 
-        onClick={hideModal} 
-        className={props.show ? "modal" : "modal hide"}
-        >
+        <div id="modal" onClick={hideModal} className={props.show ? "modal" : "modal hide"}>
             <Card className="cardModal">
                 {props.children}
             </Card>
