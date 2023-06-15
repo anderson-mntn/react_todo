@@ -48,7 +48,7 @@ ul{
 
 .card{
     background: linear-gradient(31deg, rgba(148,187,233,1) 4%, rgba(255,255,255,1) 75%);
-    color: #722828;
+    color: #292525;
     border: rgb(163, 193, 228) solid 2px;
     display: flex;
     flex-direction: row;
