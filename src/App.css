@@ -13,39 +13,51 @@ header{
     border-radius: 50%;
     padding-bottom: 5px;
 }
-
+h1{
+   
+    color: rgb(114, 114, 209);
+}
 .container{
     margin: auto;
     max-width: 600px;
+    padding: 0 .5rem;
 }
 
 .done{
     text-decoration: line-through;
+    opacity: 0.5;
 }
 
 ul{
     list-style: none;
+    padding: 0px;
 }
 
 .listUl .card{
     margin-top: .5rem ;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .item{
     width: 100%;
     padding: .25rem;
     height: fit-content;
+    margin: 0.25rem;
 }
 
 .card{
-    background-color: lightblue;
+    background: linear-gradient(31deg, rgba(148,187,233,1) 4%, rgba(255,255,255,1) 75%);
+    color: #722828;
+    border: rgb(163, 193, 228) solid 2px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 2.5rem;
+    height: max-content;
     padding: .25rem .5rem;
     border-radius: .25rem;
+    margin: 0;
 }
 
 .ul-btn{
@@ -107,7 +119,8 @@ ul{
 }
 
 .cardModal {
-    background-color: #fff;
+    background: #fff;
+    border: none;
     border-radius: .3rem;
     display: flex;
     justify-content: center;
