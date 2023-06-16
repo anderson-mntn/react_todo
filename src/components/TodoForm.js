@@ -1,22 +1,26 @@
 import React, { useState } from "react";
+import { addItem } from "../actions/listActions";
+import { useDispatch } from "react-redux";
 
 function TodoForm(props){
     const [text, setText] = useState("");
+    const dispatch = useDispatch();
 
     function handleChange(event){
         let t = event.target.value;
         setText(t);
     }
 
-    function addItem(event){
+    function addItemLocal(event){
         event.preventDefault();
 
         if(!text){
             window.alert("Type something to add on the list.")
         } else {
             // setItems([...items, text]);
-            props.onAddItem(text);
+            dispatch(addItem(text))
             setText("");
+            props.onHideModal();
         }
 
         /*
@@ -33,7 +37,7 @@ function TodoForm(props){
         <form className="modalForm">
             <p>Add a new task or item</p>
             <input onChange={handleChange} type="text" value={text}></input>
-            { <button onClick={addItem} className="BtnAddForm">Add</button>}
+            { <button onClick={addItemLocal} className="BtnAddForm">Add</button>}
             {/* Este onClick no form tenta enviar o form/action.
             Vamos evitar esse comportamento com preventDefault() dentro da função addItem */}
         </form> 
