@@ -15,7 +15,7 @@ function TodoForm(props){
         event.preventDefault();
 
         if(!text){
-            window.alert("Type something to add on the list.")
+            window.alert("Type something to add in the list.")
         } else {
             // setItems([...items, text]);
             dispatch(addItem(text))
